@@ -1,16 +1,22 @@
 <?php 
 
-	$i = '10';
+	$i = 10; //integer
+	$i = 10.20; //double
+	$i = '10'; //string
 
 	// echo $i + 10;
 	
-	$b = "0"; //String
+	$b = "2"; //String
+	$c = 2;		//int
 
-	$c = 0;		//int
+	if($b == $c)
+	{
+		echo "Only values will be checked";
+	}
 
 	if($b === $c)
 	{
-		echo "We are inside";
+		echo "Dataypes & values will be checked";
 	}
 
 	echo "<br> out";
@@ -43,14 +49,37 @@
 	echo $college2;
 
 
-	$nehal = "SDJ International College";
+	echo "<p>\tGandhiji Said: \n 'Eye for an eye will make the whole world blind.'</p>";
+
+	echo '<p>\tGandhiji Said: \n "Eye for an eye will make the whole world blind."</p>';
+
+	echo '<p>Gandhiji Said: ' . "'Eye for an eye will make the whole world blind.'" . '</p>';
+
+
+	$yaminee = "SDJ International College";
+
+	$nehal = "yaminee";
 
 	$test = 'nehal';
 
 	echo "<br>";
 
-	echo $$test;
+	echo $$$test;
 
 
+	echo "<br>";
+	echo "The value of $test is: $test";
+	echo "<br>";
+	echo 'The value of $test is: $test';
+	echo "<br>";
+	echo 'The value of $test is:'. $test;
+	
+	echo "<br>";
+	echo "The value of \$test is: $test";
+
+
+	echo "<p>Gandhiji Said: \"Eye for an eye will make the whole world blind.\"</p>";
+
+	echo "<p>Gandhiji Said: \\ $ \"Eye for an eye will make the whole world blind.\"</p>";
 
  ?>
