@@ -9,14 +9,15 @@
 	$b = "2"; //String
 	$c = 2;		//int
 
+
 	if($b == $c)
 	{
-		echo "Only values will be checked";
+		echo "Only values will be checked"; //true
 	}
 
 	if($b === $c)
 	{
-		echo "Dataypes & values will be checked";
+		echo "Dataypes & values will be checked"; //false
 	}
 
 	echo "<br> out";
@@ -56,7 +57,7 @@
 	echo '<p>Gandhiji Said: ' . "'Eye for an eye will make the whole world blind.'" . '</p>';
 
 
-	$yaminee = "SDJ International College";
+	$yaminee = "test";
 
 	$nehal = "yaminee";
 
@@ -64,7 +65,9 @@
 
 	echo "<br>";
 
-	echo $$$test;
+	echo "<hr>";
+	echo $$$$test;
+	echo "<hr>";
 
 
 	echo "<br>";
@@ -80,6 +83,6 @@
 
 	echo "<p>Gandhiji Said: \"Eye for an eye will make the whole world blind.\"</p>";
 
-	echo "<p>Gandhiji Said: \\ $ \"Eye for an eye will make the whole world blind.\"</p>";
+	echo "<p>Gandhiji Said: \\ \$ \"Eye for an eye will make the whole world blind.\"</p>";
 
  ?>
