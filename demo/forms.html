@@ -6,7 +6,9 @@
 </head>
 <body>
 
-	<form action="save.php?id=1" method="post" name="frmStudent" >
+	<form action="save.php" method="post" name="frmStudent" >
+
+		<input type="hidden" name="id" value="1">
 
 		<label for="name">Name:</label>
 		<input type="text" name="name" id="name" required>

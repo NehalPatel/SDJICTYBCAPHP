@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 	$i = 10; //integer
 	$i = 10.20; //double
 	$i = '10'; //string
