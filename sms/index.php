@@ -15,11 +15,19 @@
 
    	$query = "SELECT * FROM students"; //1000
 
+   	// die($query);
+   	// echo $query;exit;
+
    	// $result = mysql_query($query);
 
    	$result = mysqli_query($connection, $query);
    	
-   	// $row = mysql_fetch_array($result)  	
+   	// echo "<pre>";
+   	// while( $row = mysqli_fetch_array($result))
+   	// {
+   	// 	print_r($row);
+   	// }
+   	// exit;  	
    	
 ?>
 
@@ -41,7 +49,6 @@
 			<th>Mobile</th>
 			<th>City</th>
 		</tr>
-
 		<?php  while($row = mysqli_fetch_array($result)) { ?>
 
 		<tr>
@@ -53,6 +60,8 @@
 		</tr>
 
 		<?php  } //while end ?>
+
+		
 	</table>
 
 </body>
