@@ -27,9 +27,9 @@
    	
 ?>
 
-	<?php include 'includes/header.php'?>
+  <?php include 'includes/header.php'?> 
 
-      <nav class="navbar navbar-default">
+       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -67,34 +67,10 @@
         </div><!--/.container-fluid -->
       </nav>
 
-      <h1>Student Management System</h1>
+      <?php require_once('includes/heading2.php') ?>
+      <?php require_once('includes/heading2.php') ?>
 
-      <a href="insert.php" class="btn btn-primary">Insert New Student</a>
-
-      <br>
-
-	<table border="1" class="table">
-		<tr>
-			<th>ID</th>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Mobile</th>
-			<th>City</th>
-		</tr>
-		<?php  while($row = mysqli_fetch_array($result)) { ?>
-
-		<tr>
-			<td><?php echo $row['id'] ?></td>
-			<td><?php echo $row['name'] ?></td>
-			<td><?php echo $row['email'] ?></td>
-			<td><?php echo $row['mobile'] ?></td>
-			<td><?php echo $row['city'] ?></td>
-		</tr>
-
-		<?php  } //while end ?>
-
-		
-	</table>
+      
 
       <!-- Site footer -->
       <footer class="footer">
