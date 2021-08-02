@@ -1,91 +1,43 @@
-<?php
-
-	// mysql_connect("host", "username", "password");
-	// mysql_select_db("databasename");
-
-	// mysql_connect("localhost", "root", "");
-	// mysql_select_db("sms");
-
-
-	require_once 'includes/db.php';
-
-   	$query = "SELECT * FROM students"; //1000
-
-   	// die($query);
-   	// echo $query;exit;
-
-   	// $result = mysql_query($query);
-
-   	$result = mysqli_query($connection, $query);
-   	
-   	// echo "<pre>";
-   	// while( $row = mysqli_fetch_array($result))
-   	// {
-   	// 	print_r($row);
-   	// }
-   	// exit;  	
-   	
-?>
-
   <?php include 'includes/header.php'?> 
+  
+  <?php include_once 'includes/menu.php'?> 
 
-       <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-              <li><a href="../navbar-static-top/">Static top</a></li>
-              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-      </nav>
+  <?php require_once('includes/heading.php') ?>
 
-      <?php require_once('includes/heading2.php') ?>
-      <?php require_once('includes/heading2.php') ?>
+  
+  <h2>Add New Student</h2>
 
-      
+<form method="post" action="save.php">
+    <div class="form-group">
+        
+        <label for="student_name">Student Name</label>
+        <input type="text" class="form-control" id="student_name" name="student_name" placeholder="Student Name">
+        
+    </div>
 
-      <!-- Site footer -->
-      <footer class="footer">
-        <p>&copy; 2016 Company, Inc.</p>
-      </footer>
+    <div class="form-group">
+        
+        <label for="student_email">Student Email</label>
+        <input type="email" class="form-control" id="student_email" name="student_email" placeholder="Student Email">
+        
+    </div>
 
-    </div> <!-- /container -->
+    <div class="form-group">
+        
+        <label for="student_mobile">Student Mobile</label>
+        <input type="text" class="form-control" id="student_mobile" name="student_mobile" placeholder="Student Mobile">
+        
+    </div>
 
-
+    <div class="form-group">
+        
+        <label for="student_city">Student City</label>
+        <input type="text" class="form-control" id="student_city" name="student_city" placeholder="Student City">
+        
+    </div>
     
-  </body>
-</html>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 
-<?php 
 
-mysqli_close($connection);
-
-?>
+<?php include_once('includes/footer.php'); ?>
