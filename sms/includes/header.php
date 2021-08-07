@@ -13,8 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="justified-nav.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 
     
   </head>
