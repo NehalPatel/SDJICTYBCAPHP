@@ -2,10 +2,22 @@
 
     $is_error = false;
 
+    $student_name='';
+    $student_email='';
+    $student_mobile='';
+    $student_city = '';
+
     $student_name_error = '';
     $student_email_error = '';
 
     if(!empty($_POST)){
+
+        require_once 'includes/functions.php';        
+
+        $student_name = senitize_input( $_POST['student_name'] );
+        $student_email = senitize_input( $_POST['student_email'] );
+        $student_mobile = senitize_input( $_POST['student_mobile'] );
+        $student_city = senitize_input( $_POST['student_city'] );
 
         require_once 'includes/validation.php';
 
@@ -14,7 +26,7 @@
             //DB Insert
             require_once 'includes/db.php';
 
-            $insert_sql = 'INSERT INTO students (name,email,mobile,city) VALUES ("'. $_POST['student_name'] .'", "'. $_POST['student_email'] .'", "'. $_POST['student_mobile'] .'", "'. $_POST['student_city']  .'")';
+            $insert_sql = 'INSERT INTO students (name,email,mobile,city) VALUES ("'. $student_name .'", "'. $student_email .'", "'. $student_mobile .'", "'. $student_city  .'")';
 
             mysqli_query($connection, $insert_sql); // PHP 7,8
 
@@ -37,7 +49,7 @@
 </style>
   
   <h2>Add New Student</h2>
-
+  
 <form method="post">
     <div class="form-group">
         
